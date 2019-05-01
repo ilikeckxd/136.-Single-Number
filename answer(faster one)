@@ -1,0 +1,18 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()        
+        try: #用try/except是因為nums[1]可能不存在，造成錯誤
+            while nums[0] == nums[1]:
+                nums.remove(nums[0])
+                nums.remove(nums[0])
+            return nums[0]  #nums[1]存在的情況下，找到single number
+        except:    
+            return nums[0]  #nums[1]不存在的情況下，找到single number
+            
+            
+#Runtime: 144 ms, faster than 28.40% of Python online submissions for Single Number.
+#Memory Usage: 13.3 MB, less than 8.03% of Python online submissions for Single Number.
