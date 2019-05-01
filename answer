@@ -11,3 +11,8 @@ class Solution(object):
             nums.remove(nums[0])
             i = nums[0]     
         return i
+        
+        
+        
+#Runtime: 2872 ms, faster than 5.03% of Python online submissions for Single Number.
+#Memory Usage: 13.3 MB, less than 8.03% of Python online submissions for Single Number.
